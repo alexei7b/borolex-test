@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
     base: process.env.NODE_ENV === 'production'
         ? '/borolex-test/'
-        : '/',
+        : '/borolex.com/',
     build: {
         outDir: 'docs',
         rolldownOptions: {
