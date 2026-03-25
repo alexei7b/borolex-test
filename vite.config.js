@@ -3,9 +3,7 @@ import { dirname, resolve } from 'node:path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: process.env.NODE_ENV === 'production'
-        ? '/borolex-test/'
-        : '/borolex.com/',
+    base: '/',
     build: {
         outDir: 'docs',
         rolldownOptions: {
