@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
     base: "/borolex-test/",
     build: {
+        outDir: 'docs',
         rolldownOptions: {
             input: {
                 main: resolve(import.meta.dirname, 'index.html'),
