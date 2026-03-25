@@ -1,0 +1,25 @@
+@use "../base/variables.scss" as *;
+.footer {
+  padding: 88px 10%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--light-color, #F5F5F7);
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .footer {
+    align-items: center;
+  }
+}

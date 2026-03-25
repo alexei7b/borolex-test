@@ -1,0 +1,17 @@
+$light: #F4FAFE;
+$dark : #221f20;
+$title-color: #4B0082;
+
+$container-padding-inline : 12%;
+$footer-padding-inline: 10%;
+
+@media screen and (max-width: 768px) {
+    $container-padding-inline : 6%;
+    $footer-padding-inline: 6%;
+}
+@media screen and (max-width: 376px) {
+    $container-padding-inline : 15px;
+    $footer-padding-inline: 15px;
+}
+
+

@@ -1,0 +1,71 @@
+@use  "../base/variables.scss" as *;
+@use  "../base/mixins.scss" as *;
+
+.promo{
+    @include container__block;
+    &__main{
+        background: url('../../img/bg-borolex-v2.png') center center/cover no-repeat;
+        @media screen and (max-width: 720px){
+            background: url('../../img/vent-mob.png') center center/cover no-repeat;
+        }
+    }
+
+    &__subtitle{
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 48px;
+        color: $dark;
+        text-align: center;
+        @media screen and (max-width: 946px){
+            margin-top: 40px;
+            font-size: 36px;
+        }
+        @media screen and (max-width: 576px){
+            margin-top: 30px;
+            font-size: 32px;
+        }
+    }
+    &__address{
+        position: absolute;
+        left: 6%;
+        bottom: 15px;
+        
+        font-weight: 400;
+        font-size: 16px;
+        color: $dark;
+        address{
+            font-style: normal;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: -17px;
+            left: -45px;
+            width: 40px;
+            height: 49px;
+            background: url('../../icons/arrow.svg') center center / cover no-repeat;
+            
+        }
+        @media screen and (max-width: 768px){
+            &{
+                margin-top: 80px;
+            }
+            &::before{
+                left: -40px;
+            }		
+        }
+        @media screen and (max-width: 750px){		
+            &::before{
+                display: none;
+            }		
+        }
+        @media screen and (max-width: 576px){
+            margin-top: 233px;
+        }
+    }
+}

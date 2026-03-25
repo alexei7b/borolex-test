@@ -1,0 +1,1 @@
+@use "../base/variables.scss" as *;.about{padding-top:90px;background-color:var(--light-color, #F5F5F7)}

@@ -1,0 +1,5 @@
+@use "../base/variables.scss" as *;
+.customers {
+  padding: 90px 0 100px;
+  background-color: var(--light-color, #F5F5F7);
+}

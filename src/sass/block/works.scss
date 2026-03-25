@@ -1,0 +1,78 @@
+@use  "../base/variables.scss" as *;
+
+.works{
+    padding-top: 80px;
+	background-color: $light;
+    &__wrapper{
+        position: relative;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        display: block;
+        position: absolute;
+        transform: translateY(-50%);
+        width: 16px;
+    }
+    .swiper-button-prev{
+        left: -36px;
+    }
+    .swiper-button-next{
+        right: -36px;
+    }
+	
+    &__slider{
+        margin-top: 40px;
+        padding-bottom: 50px;
+       
+    }
+    .swiper-slide img{
+        width: 100%;
+    }
+    
+    .swiper-pagination{
+        bottom: 0px;
+    }
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+    }
+
+    @media screen and (max-width: 768px){
+		padding: 80px 0; 
+        .works{
+            &__slider{
+                 overflow: hidden;
+            }
+        }       	
+        .swiper-button-prev, .swiper-button-next{
+            display: none;
+        }
+	}
+
+
+    &__grid{
+        margin-top: 50px;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr) .75fr;
+        /* grid-template-columns: minmax(20px, auto) 1fr 1fr; */
+        gap: 50px 30px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        }
+        @media screen and (max-width: 768px){		
+            row-gap: 20px;
+            column-gap: 30px;
+            margin-top: 40px;
+        }
+        @media screen and (max-width: 576px){
+            row-gap: 30px;
+            column-gap: 0px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr) 1.5fr;
+        }
+    }
+}

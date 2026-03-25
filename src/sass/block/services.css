@@ -1,0 +1,129 @@
+.services {
+  display: flex;
+  margin-top: 90px;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    margin-top: 40px;
+    display: block;
+  }
+}
+
+.services__items {
+  position: relative;
+}
+
+.services__items ul {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.services__items ul li {
+  position: relative;
+  list-style-type: none;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--dark-color, #221f20);
+  margin-top: 10px;
+  /* &:nth-child(2)::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: -30px;
+                    top: 2px;
+                    width: 15px;
+                    height: 15px;
+                    background: url('../icons/coin.svg');
+                } */
+}
+
+.services__items ul li:first-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  background: url("../../icons/hammer.svg");
+}
+
+@media screen and (max-width: 992px) {
+  .services__items ul li {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__items ul li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services__items ul li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__items {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services__items ul li:first-child::before, .services__items ul li:nth-child(2)::before {
+    display: none;
+  }
+}
+
+.services__items-subtitle {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.services__items-price {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 992px) {
+  .services__items-price {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__items-price {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services__items-price {
+    font-size: 18px;
+  }
+}
+
+.services__items-price::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  left: -30px;
+  bottom: 4px;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  font-size: 24px;
+  background: url("../icons/money-euro-svgrepo-com.svg") no-repeat center;
+}
+
+@media screen and (max-width: 576px) {
+  .services__items-price::before {
+    display: none;
+  }
+}

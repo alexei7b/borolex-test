@@ -1,0 +1,140 @@
+@use  "../base/variables.scss" as *;
+@use  "../base/mixins.scss" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+	margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+	list-style: none;
+	padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img {
+	display: block;
+	max-inline-size: 100%;
+}
+
+
+
+html {
+	font-family: "Inter", sans-serif;
+	scroll-behavior: smooth;
+}
+
+.container{
+    // position: relative;
+	padding: 0 $container-padding-inline;
+	@media screen and (max-width: 480px){
+		padding: 0 5px;	
+	}
+}
+
+.title {	
+	@include title();
+	span{
+		position: relative;
+	}
+	span::after{
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		right: 0;
+		display: block;
+		height: 2px;
+		width: 75px;
+		background-color: #000;
+		
+	}
+	@media screen and (max-width: 944px){
+		font-size: 36px;
+	}
+	@media screen and (max-width: 567px){
+		font-size: 24px;
+	}
+}
+
+.logo{
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	@media screen and (max-width: 946px){
+		width: 120px;
+		height: 120px;
+	}
+}
+
+.btn {
+	position: fixed;
+	bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px auto;
+	padding: 0 10px;
+	width: 160px;
+	min-height: 38px;
+	text-decoration: none;
+
+
+	font-weight: 600;
+	font-size: 16px;
+	color: $dark;
+	background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+	border: 1px solid #5C4033;
+	cursor: pointer;
+	transition: all .3s ease-out;
+	border-radius: 15px;
+	box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+	color: #5C4033;
+	
+	.btn:hover {
+		background-color: #221f20;
+		color: #fff;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+		/* transform: translateY(-2px); */
+		font-weight: 500;
+		transform: translateX(-50%) translateY(-2px);
+	}
+
+
+	.btn:active {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.promo, .contacts{
+	position: relative;
+	min-height: 100vh;
+	/* min-height: 800px; */
+	background: #F4FAFE;
+	padding-top: 80px;
+	 /*
+	@media screen and (max-width: 576px){
+		min-height: 500px;
+		padding-top: 50px;
+		background: url('../img/Bg-mob.png') center center/cover no-repeat;
+	} */
+}

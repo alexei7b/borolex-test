@@ -1,0 +1,11 @@
+@use "../base/variables.scss" as *;
+.works {
+  padding-top: 80px;
+  background-color: var(--light-color, #F5F5F7);
+}
+
+@media screen and (max-width: 768px) {
+  .works {
+    padding: 80px 0;
+  }
+}
