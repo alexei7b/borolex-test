@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: "/borolex-test/",
+    base: "/borolex.com/",
     build: {
         rolldownOptions: {
             input: {
