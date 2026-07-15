@@ -32,3 +32,16 @@ try {
     });
 } catch (e) { }
 
+
+
+
+
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll(".menu_item").forEach(item => {
+    const link = item.querySelector(".menu_link");
+
+    if (link.getAttribute("href") === currentPage) {
+        item.classList.add("active");
+    }
+});

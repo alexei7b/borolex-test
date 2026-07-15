@@ -68,6 +68,12 @@ nav{
 		transform: translateY(3px);
   		box-shadow: 0 14px 30px rgba(123,92,255,.35);
 	}
+	&.active {
+        background: #8B5CF6;
+		transform: translateY(2px);
+        box-shadow: 
+            0 10px 25px rgba(139, 92, 246, .45);
+    }
 	
 	@media screen and  (max-width: 944px){
 		padding: 8px 25px;
